@@ -4,22 +4,21 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
-	import java.io.BufferedReader;
-	import java.io.InputStream;
-	import java.io.InputStreamReader;
-	import java.util.ArrayList;
-
-	import org.apache.http.HttpEntity;
-	import org.apache.http.HttpResponse;
-	import org.apache.http.NameValuePair;
-	import org.apache.http.client.HttpClient;
-	import org.apache.http.client.entity.UrlEncodedFormEntity;
-	import org.apache.http.client.methods.HttpPost;
-	import org.apache.http.impl.client.DefaultHttpClient;
-	import org.apache.http.message.BasicNameValuePair;
-	import org.json.JSONArray;
-	import org.json.JSONException;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import android.util.Log;
 import android.view.View;
@@ -90,8 +89,6 @@ public class ConnexionActivity extends Activity {
 	    				JSONArray jArray = new JSONArray(result);
 	    				int b=jArray.length();
 	    				
-	    					
-	    	           
 	    				   JSONObject json_data = jArray.getJSONObject(0);
 	    			
 	    				
@@ -113,9 +110,7 @@ public class ConnexionActivity extends Activity {
 	    			 //  Log.e("log_tag", "Error parsing data " + e.toString());
 	    			   Toast.makeText(ConnexionActivity.this, "Utilisateur Inexistant ", Toast.LENGTH_LONG).show();
 	    		   }
-	    			
 	    		
-
 	            }
 	            });          
 	     // Link to Register Screen
@@ -128,8 +123,5 @@ public class ConnexionActivity extends Activity {
 	                //finish();
 	            }
 	        });
-	       
-	        
 	    }
-
 }
